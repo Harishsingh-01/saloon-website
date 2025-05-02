@@ -60,4 +60,80 @@ function nextTestimonial() {
 setInterval(nextTestimonial, 5000);
 
 // Initialize first testimonial
-showTestimonial(0); 
+showTestimonial(0);
+
+// Services Slider
+const sliderContainer = document.querySelector('.slider-container');
+const serviceCategories = document.querySelectorAll('.service-category');
+const prevBtn = document.querySelector('.services-slider .prev-btn');
+const nextBtn = document.querySelector('.services-slider .next-btn');
+const sliderDots = document.querySelector('.slider-dots');
+let currentSlide = 0;
+let slideInterval;
+
+// Create dots
+serviceCategories.forEach((_, index) => {
+    const dot = document.createElement('div');
+    dot.classList.add('slider-dot');
+    if (index === 0) dot.classList.add('active');
+    dot.addEventListener('click', () => goToSlide(index));
+    sliderDots.appendChild(dot);
+});
+
+const dots = document.querySelectorAll('.slider-dot');
+
+function updateSlider() {
+    sliderContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
+    dots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentSlide);
+    });
+}
+
+function nextSlide() {
+    currentSlide = (currentSlide + 1) % serviceCategories.length;
+    updateSlider();
+}
+
+function prevSlide() {
+    currentSlide = (currentSlide - 1 + serviceCategories.length) % serviceCategories.length;
+    updateSlider();
+}
+
+function goToSlide(index) {
+    currentSlide = index;
+    updateSlider();
+}
+
+// Add event listeners
+prevBtn.addEventListener('click', () => {
+    prevSlide();
+    resetInterval();
+});
+
+nextBtn.addEventListener('click', () => {
+    nextSlide();
+    resetInterval();
+});
+
+// Auto slide functionality
+function startAutoSlide() {
+    slideInterval = setInterval(nextSlide, 5000);
+}
+
+function resetInterval() {
+    clearInterval(slideInterval);
+    startAutoSlide();
+}
+
+// Pause auto-slide on hover
+sliderContainer.addEventListener('mouseenter', () => {
+    clearInterval(slideInterval);
+});
+
+sliderContainer.addEventListener('mouseleave', () => {
+    startAutoSlide();
+});
+
+// Initialize slider
+updateSlider();
+startAutoSlide(); 
