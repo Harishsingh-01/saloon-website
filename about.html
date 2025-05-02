@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shree Beauty Parlour - About Us</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .about-section {
+            padding: 8rem 5% 5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .about-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .about-header h2 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-bottom: 4rem;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+
+        .about-text p {
+            color: var(--text-color);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .about-image {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .team-section {
+            background-color: var(--white);
+            padding: 4rem 5%;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+        }
+
+        .team-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .team-header h3 {
+            color: var(--primary-color);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .team-member {
+            text-align: center;
+            padding: 2rem;
+            background-color: var(--background-color);
+            border-radius: 15px;
+            transition: var(--transition);
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .team-member img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            margin-bottom: 1.5rem;
+            object-fit: cover;
+            border: 3px solid var(--primary-color);
+        }
+
+        .team-member h4 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+
+        .team-member p.role {
+            color: var(--text-color);
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .team-member p.experience {
+            color: var(--light-text);
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+        }
+
+        .team-member .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .team-member .social-links a {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            transition: var(--transition);
+        }
+
+        .team-member .social-links a:hover {
+            color: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+
+        @media (max-width: 768px) {
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .about-image {
+                order: -1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Shree Beauty Parlour</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html" class="active">About Us</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="about-section">
+            <div class="about-header">
+                <h2>About Us</h2>
+                <p>Your trusted beauty destination since 2010</p>
+            </div>
+
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Our Story</h3>
+                    <p>Welcome to Shree Beauty Parlour, where beauty meets tradition. Founded in 2010 by Mrs. Priya Sharma, we have been dedicated to providing exceptional beauty services that blend traditional Indian beauty practices with modern techniques.</p>
+                    <p>Our journey began with a simple vision: to create a space where every woman could feel beautiful and confident. Over the years, we have grown into one of Mumbai's most trusted beauty destinations, known for our expertise in bridal makeup, mehendi, and comprehensive beauty treatments.</p>
+                    <p>At Shree Beauty Parlour, we believe in the power of natural beauty enhanced by expert care. Our team of skilled professionals is committed to providing personalized services that bring out your inner radiance.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.pexels.com/photos/3738339/pexels-photo-3738339.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Salon Interior">
+                </div>
+            </div>
+
+            <div class="team-section">
+                <div class="team-header">
+                    <h3>Meet Our Expert Team</h3>
+                    <p>Skilled professionals dedicated to making you look and feel beautiful</p>
+                </div>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <img src="https://images.pexels.com/photos/7389123/pexels-photo-7389123.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Priya Sharma">
+                        <h4>Mrs. Priya Sharma</h4>
+                        <p class="role">Founder & Head Beautician</p>
+                        <p class="experience">15+ years of experience in bridal makeup and beauty treatments</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <img src="https://images.pexels.com/photos/7389184/pexels-photo-7389184.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Anjali Patel">
+                        <h4>Ms. Anjali Patel</h4>
+                        <p class="role">Senior Makeup Artist</p>
+                        <p class="experience">8+ years specializing in bridal and party makeup</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <img src="https://images.pexels.com/photos/7389126/pexels-photo-7389126.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Meera Rajput">
+                        <h4>Mrs. Meera Rajput</h4>
+                        <p class="role">Mehendi Artist</p>
+                        <p class="experience">10+ years of expertise in traditional and modern mehendi designs</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <img src="https://images.pexels.com/photos/7389127/pexels-photo-7389127.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Pooja Verma">
+                        <h4>Ms. Pooja Verma</h4>
+                        <p class="role">Hair Specialist</p>
+                        <p class="experience">6+ years specializing in hair treatments and styling</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                <p><i class="fas fa-envelope"></i> info@shreebeautyparlour.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> 123 MG Road, Mumbai, Maharashtra</p>
+            </div>
+            <div class="footer-section">
+                <h3>Opening Hours</h3>
+                <p>Monday - Saturday: 9:00 AM - 8:00 PM</p>
+                <p>Sunday: 10:00 AM - 4:00 PM</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Shree Beauty Parlour. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

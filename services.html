@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shree Beauty Parlour - Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .services-section {
+            padding: 8rem 5% 5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .services-section h2 {
+            text-align: center;
+            color: var(--primary-color);
+            margin-bottom: 3rem;
+            font-size: 2.5rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-category {
+            margin-bottom: 3rem;
+        }
+
+        .service-category h3 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            text-align: center;
+            font-size: 1.8rem;
+        }
+
+        .service-card {
+            background-color: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            margin-bottom: 2rem;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .service-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .service-content {
+            padding: 1.5rem;
+        }
+
+        .service-content h4 {
+            color: var(--text-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .service-content p {
+            color: var(--light-text);
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .price {
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        @media (max-width: 768px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Shree Beauty Parlour</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="services-section">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service-category">
+                    <h3>Bridal Services</h3>
+                    <div class="service-card">
+                        <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Bridal Makeup" class="service-image">
+                        <div class="service-content">
+                            <h4>Complete Bridal Package</h4>
+                            <p>Includes makeup, hairstyling, mehendi, and more</p>
+                            <span class="price">₹25,000 - ₹50,000</span>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Bridal Makeup" class="service-image">
+                        <div class="service-content">
+                            <h4>Bridal Makeup</h4>
+                            <p>Traditional and contemporary bridal makeup</p>
+                            <span class="price">₹8,000 - ₹15,000</span>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <img src="https://images.unsplash.com/photo-1619451334792-150fd785ee74?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Bridal Mehendi" class="service-image">
+                        <div class="service-content">
+                            <h4>Bridal Mehendi</h4>
+                            <p>Intricate bridal mehendi designs</p>
+                            <span class="price">₹5,000 - ₹10,000</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-category">
+                    <h3>Hair Services</h3>
+                    <div class="service-card">
+                        <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Hair Styling" class="service-image">
+                        <div class="service-content">
+                            <h4>Hair Cut & Styling</h4>
+                            <p>Professional haircut and styling</p>
+                            <span class="price">₹500 - ₹1,500</span>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Hair Color" class="service-image">
+                        <div class="service-content">
+                            <h4>Hair Color</h4>
+                            <p>Professional hair coloring services</p>
+                            <span class="price">₹1,500 - ₹3,500</span>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Hair Treatment" class="service-image">
+                        <div class="service-content">
+                            <h4>Hair Treatment</h4>
+                            <p>Ayurvedic hair treatments and oil massage</p>
+                            <span class="price">₹1,000 - ₹2,500</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-category">
+                    <h3>Skin Care</h3>
+                    <div class="service-card">
+                        <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Facial Treatment" class="service-image">
+                        <div class="service-content">
+                            <h4>Facial Treatments</h4>
+                            <p>Gold, diamond, and herbal facials</p>
+                            <span class="price">₹1,500 - ₹3,500</span>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Threading" class="service-image">
+                        <div class="service-content">
+                            <h4>Threading</h4>
+                            <p>Eyebrow and facial threading</p>
+                            <span class="price">₹100 - ₹300</span>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Waxing" class="service-image">
+                        <div class="service-content">
+                            <h4>Waxing</h4>
+                            <p>Full body waxing services</p>
+                            <span class="price">₹500 - ₹2,000</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-category">
+                    <h3>Mehendi & Nail Art</h3>
+                    <div class="service-card">
+                        <img src="https://images.unsplash.com/photo-1619451334792-150fd785ee74?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Bridal Mehendi" class="service-image">
+                        <div class="service-content">
+                            <h4>Bridal Mehendi</h4>
+                            <p>Full hand and feet mehendi with intricate bridal designs</p>
+                            <span class="price">₹5,000 - ₹10,000</span>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <img src="https://images.pexels.com/photos/1864637/pexels-photo-1864637.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Party Mehendi" class="service-image">
+                        <div class="service-content">
+                            <h4>Party Mehendi</h4>
+                            <p>Simple and elegant designs for special occasions</p>
+                            <span class="price">₹500 - ₹2,000</span>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <img src="https://images.unsplash.com/photo-1604654894611-6973b376cbde?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Nail Art" class="service-image">
+                        <div class="service-content">
+                            <h4>Nail Art</h4>
+                            <p>Creative nail designs and manicure with latest trends</p>
+                            <span class="price">₹300 - ₹1,000</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                <p><i class="fas fa-envelope"></i> info@shreebeautyparlour.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> 123 MG Road, Mumbai, Maharashtra</p>
+            </div>
+            <div class="footer-section">
+                <h3>Opening Hours</h3>
+                <p>Monday - Saturday: 9:00 AM - 8:00 PM</p>
+                <p>Sunday: 10:00 AM - 4:00 PM</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Shree Beauty Parlour. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
